@@ -1,7 +1,5 @@
 #include <stdio.h>
-/*
- *a program that prints a simple text using puts() function
- */
+/* this is the main fuction of the program*/
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
