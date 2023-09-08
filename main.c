@@ -1,3 +1,4 @@
+#include <stdio.0>
 /**
  * main - Entry point
  *
