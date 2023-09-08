@@ -1,6 +1,6 @@
 #include <stdio.h>
 /*
- * a program that prints a simple text using puts() function
+ *a program that prints a simple text using puts() function
  */
 int main(void) 
 {
