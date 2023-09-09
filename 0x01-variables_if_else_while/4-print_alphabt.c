@@ -1,11 +1,12 @@
 #include <stdio.h>
 /*
-* mian - this is the main function
+* main - this is the main function
 * Return:0
 */
 int main(void)
 {
 	char lowerCase;
+
 	lowerCase = 'a';
 
 	while (lowerCase <= 'z')
