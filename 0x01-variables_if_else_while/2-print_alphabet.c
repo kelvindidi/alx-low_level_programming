@@ -5,12 +5,11 @@
 */
 int main(void)
 {
-	char alphabets[] = "abcdefghijklmnopqrstuvwxyz";
-	int i;
+	char alphabets;
 
-	for (i =  0; i <= 26; i++)
+	for (alphabets = 'a'; alphabets <= 'z'; alphabets++)
 	{
-		putchar(alphabets[i]);
+		putchar(alphabets);
 		/*putchar(10);*/
 	}
 	return (0);
