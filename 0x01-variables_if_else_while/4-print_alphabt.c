@@ -1,18 +1,23 @@
 #include <stdio.h>
 /*
 * mian - this is the main function
-* Returna:0
+* Return:0
 */
 int main(void)
 {
 	char lowerCase;
-	char upperCase;
 	lowerCase = 'a';
-	upperCase = 'A';
-	while (lowerCase < 'z')
+
+	while (lowerCase <= 'z')
 	{
-		if (lowerCase == 'q' || lowerCase == 'e'))
+		if (lowerCase == 'q' || lowerCase == 'e')
 		{
+			lowerCase++;
 			continue;
 		}
 		putchar(lowerCase);
+		lowerCase++;
+	}
+	putchar(10);
+	return (0);
+}
