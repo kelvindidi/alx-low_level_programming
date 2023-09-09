@@ -1,5 +1,4 @@
 #include <stdio.h>
-//#include <string.h>
 /**
 * main - main function starts here
 * Return:0
