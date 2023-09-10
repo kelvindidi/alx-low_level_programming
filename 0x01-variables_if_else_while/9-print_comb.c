@@ -14,10 +14,12 @@ int main(void)
 			putchar(i);
 			putchar(',');
 			putchar(' ');
+			putchar(10);
 		}
 		else
 		{
 			putchar(i);
+			putchar(10);
 		}
 	}
 	return (0);
