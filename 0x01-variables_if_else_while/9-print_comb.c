@@ -5,16 +5,19 @@
 */
 int main(void)
 {
-	int i, j;
+	int i;
 
-	for (i = 0; i < 10; i++)
+	for (i = 48; i < 58; i++)
 	{
-		for (j = i + 1; j < 10; j++)
+		if (i < 57)
 		{
-			putchar(i + '0');
+			putchar(i);
 			putchar(',');
-			putchar(j + '0');
 			putchar(' ');
+		}
+		else
+		{
+			putchar(i);
 		}
 	}
 	return (0);
