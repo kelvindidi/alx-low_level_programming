@@ -5,12 +5,8 @@
 */
 void print_alphabet(void)
 {
-	char string[] = "abcdefghijklmnopqrstuvwxyz";
-	int i = 'a';
-
-	while (i <= 'z')
+	for (int a = 'a'; a < 'z'; a++)
 	{
-		_putchar(string[i]);
-		i++;
+		_putchar(a);
 	}
 }
