@@ -14,8 +14,3 @@ int _isdigit(int c)
 	else
 		return (0);
 }
-int main(void)
-{
-	_isdigit(2);
-	return (0);
-}
