@@ -1,9 +1,9 @@
 #include "main.h"
 /**
-* main - this is the main function
-* Return: 0
+* print_alphabet - this is the main function
+* Return: void
 */
-void print_alphabets(void)
+void print_alphabet(void)
 {
 	char string[] = "abcdefghijklmnopqrstuvwxyz";
 	int i = 'a';
