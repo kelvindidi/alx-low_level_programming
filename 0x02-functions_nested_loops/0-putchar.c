@@ -12,6 +12,7 @@ int main(void)
 	while (i < (int)strlen(string))
 	{
 		_putchar(string[i]);
+		i++;
 	}
 	return (0);
 }
