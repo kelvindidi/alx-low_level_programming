@@ -5,14 +5,17 @@
 */
 int main(void)
 {
-        char string[] = "abcdefghijklmnopqrstuvwxyz";
-        int i = 'a';
+	void print_alphabets(void)
+	{
+		char string[] = "abcdefghijklmnopqrstuvwxyz";
+		int i = 'a';
 
-        while (i <= 'z')
-        {
-                _putchar(string[i]);
-                i++;
-        }
-        _putchar(10);
-        return (0);
+		while (i <= 'z')
+		{
+			_putchar(string[i]);
+			i++;
+		}
+		_putchar(10);
+	}
+	return (0);
 }
