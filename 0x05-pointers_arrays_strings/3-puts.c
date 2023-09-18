@@ -5,6 +5,7 @@
 * @str: str to be displayed
 **/
 
-void _puts(char *str) {
+void _puts(char *str)
+{
 	puts(str);
 }
