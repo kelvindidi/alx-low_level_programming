@@ -10,22 +10,27 @@
 void puts_half(char *str)
 {
 	int length = strlen(str);
-	int j;
 
 	if (length % 2 == 0)
 	{
-		while (j < length/2)
+		int j = (length / 2) - 1;
+
+		while (j < length)
 		{
 			putchar(str[j]);
 			j++;
 		}
+		putchar('\n');
 	}
 	else
 	{
-		while (j < (length - 1)/2)
+		int j = (length - 1 / 2) - 1;
+
+		while (j < length)
 		{
 			putchar(str[j]);
 			j++;
 		}
+		putchar('\n');
 	}
 }
