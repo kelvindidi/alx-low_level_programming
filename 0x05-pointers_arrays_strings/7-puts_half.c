@@ -13,7 +13,7 @@ void puts_half(char *str)
 
 	if (length % 2 == 0)
 	{
-		int j = (length / 2) - 1;
+		int j = (length / 2);
 
 		while (j < length)
 		{
@@ -24,7 +24,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		int j = (length - 1 / 2) - 1;
+		int j = (length - 1 / 2);
 
 		while (j < length)
 		{
