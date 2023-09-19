@@ -24,9 +24,9 @@ void puts_half(char *str)
 	}
 	else
 	{
-		int j = 0;
+		int j = (length - 1) / 2;
 
-		while (j < (length - 1) / 2 )
+		while (j < length )
 		{
 			putchar(str[j]);
 			j++;
