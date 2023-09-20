@@ -5,10 +5,11 @@
 * _strcat - concatenate two strings
 * @dest: string to be appended to
 * @src: string to be appended to dest
+* Return: dest pointer
 */
 
 char *_strcat(char *dest, char *src)
 {
 	strcat(dest, src);
-	return(dest);
-} 
+	return (dest);
+}
