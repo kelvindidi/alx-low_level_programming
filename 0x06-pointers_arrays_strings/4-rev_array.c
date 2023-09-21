@@ -2,18 +2,18 @@
 
 /**
  * reverse_array - reverses an array
- * @a: integer aray to be reversed
- * @n: number of array that will be reversed
+ * @a: integer array to be reversed
+ * @n: number of elements in the array
  */
-
 void reverse_array(int *a, int n)
 {
-	int i;
+	int i, temp;
 
-	for (i = 0; i < 0; i++, n--)
+	for (i = 0; i < n / 2; i++)
 	{
-		int rev = a[n - 1];
-
-		a[i] = rev;
+		temp = a[i];
+		a[i] = a[n - 1 - i];
+		a[n - 1 - i] = temp;
 	}
 }
+
