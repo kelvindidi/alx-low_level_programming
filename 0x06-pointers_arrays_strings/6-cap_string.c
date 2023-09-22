@@ -1,10 +1,11 @@
 #include "main.h"
 #include <ctype.h>
+
 /**
-* cap_string - capitalize words in string
-* @str: string to be worked on
-* Return: capitalized string
-*/
+ * cap_string - capitalize words in a string
+ * @str: string to be worked on
+ * Return: capitalized string
+ */
 
 char *cap_string(char *str)
 {
@@ -14,9 +15,9 @@ char *cap_string(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (isspace(str[i]) || str[i] == ',' ||
-		str[i] == ';' || str[i] == '.' || str[i] == '!' ||
-		str[i] == '?' || str[i] == '"' || str[i] == '(' ||
-		str[i] == ')' || str[i] == '{' || str[i] == '}')
+				str[i] == ';' || str[i] == '.' || str[i] == '!' ||
+				str[i] == '?' || str[i] == '"' || str[i] == '(' ||
+				str[i] == ')' || str[i] == '{' || str[i] == '}')
 		{
 			capitalizeNext = 1;
 		}
