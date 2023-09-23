@@ -1,39 +1,30 @@
 #include "main.h"
-#include <ctype.h>
-
 /**
- * cap_string - capitalize words in a string
- * @str: string to be worked on
- * Return: capitalized string
+ * cap_string - capitalizes all words of a string
+ * @s: string to capitalize.
+ * Return: destination.
  */
 
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	int capitalizeNext = 1;
-	int i;
+	int i, counter = 0;
+	int sep[] = {9, 10, 32, 33, 34, 40, 41, 44, 46, 59, 63, 123, 125};
 
-	for (i = 0; str[i] != '\0'; i++)
+	if (*(s + counter) >= 97 && *(s + counter) <= 122)
+		*(s + counter) = *(s + counter) - 32;
+	counter++;
+	while (*(s + counter) != '\0')
 	{
-		if (isspace(str[i]) || str[i] == ',' ||
-				str[i] == ';' || str[i] == '.' || str[i] == '!' ||
-				str[i] == '?' || str[i] == '"' || str[i] == '(' ||
-				str[i] == ')' || str[i] == '{' || str[i] == '}')
+		for (i = 0; i < 13; i++)
 		{
-			capitalizeNext = 1;
-		}
-		else
-		{
-			if (capitalizeNext)
+			if (*(s + counter) == sep[i])
 			{
-				str[i] = toupper(str[i]);
-				capitalizeNext = 0;
-			}
-			else
-			{
-				str[i] = tolower(str[i]);
+				if ((*(s + (counter + 1)) >= 97) && (*(s + (counter + 1)) <= 122))
+					*(s + (counter + 1)) = *(s + (counter + 1)) - 32;
+				break;
 			}
 		}
+		counter++;
 	}
-
-	return (str);
+	return (s);
 }
