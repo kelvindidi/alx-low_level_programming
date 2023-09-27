@@ -9,7 +9,7 @@ void print_diagsums(int *a, int size)
 {
     int sum_diag1 = 0;
     int sum_diag2 = 0;
-    int i, j;
+    int i;
 
     for (i = 0; i < size; i++)
     {
