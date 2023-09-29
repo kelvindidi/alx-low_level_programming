@@ -5,7 +5,7 @@
 * @x: integer to be raised to power
 * @y: the power
 */
-int pow_recursion(int x; int y)
+int pow_recursion(int x int y)
 {
 	if (y == 0)
 	{
