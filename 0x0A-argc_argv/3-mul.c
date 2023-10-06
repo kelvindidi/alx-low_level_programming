@@ -27,7 +27,7 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc == 2)
+	if (argc == 3)
 	{
 		int num1, num2;
 
@@ -37,6 +37,6 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	printf("Error");
+	printf("Error\n");
 	return (1);
 }
