@@ -27,13 +27,16 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc >= 1)
+	if (argc == 2)
 	{
 		int num1, num2;
 
 		num1 = atoi(argv[1]);
 		num2 = atoi(argv[2]);
 		printf("%d\n", num1 * num2);
+		return (0);
 	}
-	return (0);
+
+	printf("Error");
+	return (1);
 }
