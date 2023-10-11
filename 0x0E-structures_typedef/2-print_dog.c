@@ -5,10 +5,10 @@
  * print_dog - prints the elements of a variable of struct dog
  * @d: pointer to struct variable
  */
-void print_dog(struct dog *d) {
-	if (d == NULL) {
+void print_dog(struct dog *d)
+{
+	if (d == NULL)
 		return;
-	}
 
 	printf("Name: %s\n", (d->name != NULL) ? d->name : "(nil)");
 	printf("Age: %.2f\n", d->age);
