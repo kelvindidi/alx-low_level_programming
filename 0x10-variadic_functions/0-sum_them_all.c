@@ -5,15 +5,18 @@
  * sum_them_all - a function that returns the sum of all its parameters.
  * @n: arg count
  * @...: variable arguments
+ * Return: sum of args if n is  not equal to 0
  */
 
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list arg;
+	unsigned int i;
+	int v;
+	int sum = 0;
+
 	va_start(arg, n);
 
-	unsigned int i;
-	int sum = 0;
 	if (n == 0)
 	{
 		va_end(arg);
@@ -22,7 +25,7 @@ int sum_them_all(const unsigned int n, ...)
 
 	for (i = 0; i < n; i++)
 	{
-		int v = va_arg(arg, int);
+		v = va_arg(arg, int);
 		sum += v;
 	}
 	return (sum);
