@@ -1,32 +1,20 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * main - Entry point
+ * listint_len - Returns the number of elements in a linked listint_t list.
+ * @h: A pointer to the head of the linked list.
  *
- * Return: Always 0 (Success)
+ * Return: The number of elements in the list.
  */
-int main(void)
+size_t listint_len(const listint_t *h)
 {
-	listint_t *head;
-	listint_t *new;
-	listint_t hello = {8, NULL};
-	size_t n;
+	size_t count = 0;
 
-	head = &hello;
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
+	while (h != NULL)
 	{
-		perror("Error: malloc failed\n");
-		return (1);
+		count++;
+		h = h->next;
 	}
-	new->n = 9;
-	new->next = head;
-	head = new;
-	n = listint_len(head);
-	printf("-> %lu elements\n", n);
-	free(new);
 
-	return (0);
+	return (count);
 }
