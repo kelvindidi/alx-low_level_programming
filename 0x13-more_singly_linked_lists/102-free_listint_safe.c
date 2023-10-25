@@ -1,32 +1,32 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
 
 /**
- * print_listint_safe - Prints a listint_t linked list safely
- * @head: A pointer to the head of the linked list
- * Return: The number of nodes in the list
+ * free_listint_safe - Frees a listint_t list safely
+ * @h: A pointer to a pointer to the head of the linked list
+ * Return: The size of the list that was freed
  */
-size_t print_listint_safe(const listint_t *head)
+size_t free_listint_safe(listint_t **h)
 {
-	const listint_t *tortoise = head;
-	const listint_t *hare = head;
+	listint_t *current, *next;
 	size_t count = 0;
 
-	while (hare != NULL && hare->next != NULL)
+	if (h == NULL || *h == NULL)
+		return (0);
+
+	current = *h;
+	while (current != NULL)
 	{
-		hare = hare->next->next;
-		tortoise = tortoise->next;
-
-		printf("[%p] %d\n", (void *)tortoise, tortoise->n);
+		next = current->next;
+		free(current);
 		count++;
-
-		if (hare == tortoise)
+		current = next;
+		if (current == *h)
 		{
-			printf("-> [%p] %d\n", (void *)tortoise, tortoise->n);
-			exit(98);
+			*h = NULL;
+			break;
 		}
 	}
 
-	return (count);
+	return count;
 }
